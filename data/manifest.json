@@ -1,0 +1,59 @@
+{
+  "source_folder": "https://drive.google.com/drive/folders/1e-4Tmme_lDIbw_XVc8GZiD-9bjxRxydC",
+  "files": [
+    {
+      "file_id": "1oZP6ZU3vFPDMDQRms-XgWiNd83g-3TSf",
+      "path": "notxbf_com_excels_f4/bc98-2983-907b/valid/bc98-2983-907b_0.xlsx",
+      "size_bytes": 131065601,
+      "device": "bc98-2983-907b",
+      "split": "valid",
+      "url": "https://drive.google.com/file/d/1oZP6ZU3vFPDMDQRms-XgWiNd83g-3TSf/view",
+      "sha256": "7f7707c0e9e5037bb26b724f2f899536d705628d4a31ae4984a00653a6dee08b"
+    },
+    {
+      "file_id": "14_g5qBf71wrfDsJxoFmvI2TAiDcP1uRl",
+      "path": "notxbf_com_excels_f4/bc98-2983-907b/train/bc98-2983-907b_0.xlsx",
+      "size_bytes": 122021993,
+      "device": "bc98-2983-907b",
+      "split": "train",
+      "url": "https://drive.google.com/file/d/14_g5qBf71wrfDsJxoFmvI2TAiDcP1uRl/view",
+      "sha256": "ac167863d32537f715741006f3533c3b1e11dd7e30f1cf02c31fa85aa0007534"
+    },
+    {
+      "file_id": "16eOBU5I5nPitxnbbw_YjJZb2ODlVov1w",
+      "path": "notxbf_com_excels_f4/d0c1-bfe4-18f0/train/d0c1-bfe4-18f0_0.xlsx",
+      "size_bytes": 128440729,
+      "device": "d0c1-bfe4-18f0",
+      "split": "train",
+      "url": "https://drive.google.com/file/d/16eOBU5I5nPitxnbbw_YjJZb2ODlVov1w/view",
+      "sha256": "23ae659b982ecb6294a5e6a0572c01d6456c8259bd775958e2239c4d4939193c"
+    },
+    {
+      "file_id": "1_VpyFmIiFVhax6LIRhu8IhXjSY4W1Qic",
+      "path": "notxbf_com_excels_f4/d0c1-bfe4-18f0/valid/d0c1-bfe4-18f0_0.xlsx",
+      "size_bytes": 138210577,
+      "device": "d0c1-bfe4-18f0",
+      "split": "valid",
+      "url": "https://drive.google.com/file/d/1_VpyFmIiFVhax6LIRhu8IhXjSY4W1Qic/view",
+      "sha256": "8e43f87931ece56a2c522222fe895d451c3bca9104326552b1be0ee7a4014baa"
+    },
+    {
+      "file_id": "1Jc2O81b9eNpNGKp-GlTDdG6FE5eAod5o",
+      "path": "notxbf_com_excels_f4/341c-f0d4-70be/valid/341c-f0d4-70be_0.xlsx",
+      "size_bytes": 163615127,
+      "device": "341c-f0d4-70be",
+      "split": "valid",
+      "url": "https://drive.google.com/file/d/1Jc2O81b9eNpNGKp-GlTDdG6FE5eAod5o/view",
+      "sha256": "85415a6778aed9ca22fd53413728ea6c4700ba4ddaeec38be9553f89111f3f6c"
+    },
+    {
+      "file_id": "1suxX6enF3ahUxfHKZOo4JrjCFLQrrSmr",
+      "path": "notxbf_com_excels_f4/341c-f0d4-70be/train/341c-f0d4-70be_0.xlsx",
+      "size_bytes": 152251795,
+      "device": "341c-f0d4-70be",
+      "split": "train",
+      "url": "https://drive.google.com/file/d/1suxX6enF3ahUxfHKZOo4JrjCFLQrrSmr/view",
+      "sha256": "42e06ef553f31d5516a66afcbc46da9d22671fa400618cc14335a2b1a00bb7cc"
+    }
+  ]
+}

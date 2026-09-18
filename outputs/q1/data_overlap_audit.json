@@ -1,0 +1,19 @@
+{
+  "method": "Exact float64 SINR row SHA256, plus total channel energy reconstructed using declared physical scaling and rounded to 11 significant decimal digits.",
+  "splits": {
+    "train": {
+      "rows": 20369,
+      "exact_sinr_unique_rows": 20369,
+      "channel_energy_unique_rows_11_significant_digits": 27
+    },
+    "valid": {
+      "rows": 20369,
+      "exact_sinr_unique_rows": 20369,
+      "channel_energy_unique_rows_11_significant_digits": 25
+    }
+  },
+  "shared_exact_sinr_rows": 0,
+  "shared_rounded_energy_vectors": 24,
+  "valid_rows_with_rounded_energy_seen_in_train": 20304,
+  "limits": "Energy vectors sum antenna powers and discard complex phase/spatial information. Approximate energy repetition is not proof of identical CSI or label leakage. Exact SINR non-overlap does not rule out approximate input similarity."
+}

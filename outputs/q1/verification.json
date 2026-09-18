@@ -1,0 +1,13 @@
+{
+  "tests_passed": 13,
+  "raw_files_sha256_verified": 6,
+  "derived_files_sha256_verified": 5,
+  "prediction_rows": 20369,
+  "parameter_search_candidates": 2384,
+  "nested_outer_folds": 3,
+  "saved_model_predictions_match": true,
+  "source_order_preserved": true,
+  "observed_labels_only": true,
+  "outer_metrics_recomputed": true,
+  "environment": "Anaconda FirstPythonEnv"
+}

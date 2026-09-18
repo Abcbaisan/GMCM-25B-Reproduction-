@@ -1,0 +1,134 @@
+{
+  "description": "Real supplied Excel data; derived linear per-subcarrier SINR, no synthetic rows.",
+  "signal_scale": 0.001,
+  "noise_epsilon_w": 0.0,
+  "subcarriers": 122,
+  "formula": "sum(abs(H)**2,rx,tx)*0.001/(10**((noise_floor-30)/10)/122)",
+  "files": [
+    {
+      "path": "q1_row_audit.csv.gz",
+      "sha256": "838e30c9886e774669cf38f1cfb2ec2b832ec7b26eb0cdad5bfa50973695d84d",
+      "size_bytes": 806590
+    },
+    {
+      "path": "q1_train.npz",
+      "sha256": "777baacc60809c2546efd235dd9288c7992f096987f3c5991533864ebb86a621",
+      "size_bytes": 1511789
+    },
+    {
+      "path": "q1_train_rows.csv",
+      "sha256": "415bc98e8a4a473c7f9b3880373ce29afbdc653adc8fed2bf19396c78503dbd4",
+      "size_bytes": 4300750
+    },
+    {
+      "path": "q1_valid.npz",
+      "sha256": "05cee2ca59ff5eac3751f3b033224340c7d321b63fb65e1b2fdcab29512f0c28",
+      "size_bytes": 1491061
+    },
+    {
+      "path": "q1_valid_rows.csv",
+      "sha256": "1283fdc466251f3889bb0212ad524db540d8a6d402397b88d148040b3a0955e1",
+      "size_bytes": 4294717
+    }
+  ],
+  "raw_data_audit": {
+    "train": {
+      "rows_total": 20369,
+      "rows_ok": 20369,
+      "rows_invalid": 0,
+      "reason_counts": {},
+      "rows_retained": 20369,
+      "rows_dropped": 0
+    },
+    "valid": {
+      "rows_total": 20369,
+      "rows_ok": 20369,
+      "rows_invalid": 0,
+      "reason_counts": {},
+      "rows_retained": 20369,
+      "rows_dropped": 0
+    },
+    "settings": {
+      "cache_schema": 1,
+      "signal_scale": 0.001,
+      "noise_epsilon_w": 0.0,
+      "n_subcarriers": 122,
+      "noise_dbm_range": [
+        -120,
+        -50
+      ],
+      "beamforming_en": 0,
+      "mcs_requirement": "finite and nonnegative"
+    },
+    "sources": [
+      {
+        "path": "notxbf_com_excels_f4/bc98-2983-907b/valid/bc98-2983-907b_0.xlsx",
+        "device": "bc98-2983-907b",
+        "split": "valid",
+        "size_bytes": 131065601,
+        "sha256": "7f7707c0e9e5037bb26b724f2f899536d705628d4a31ae4984a00653a6dee08b",
+        "rows_total": 6161,
+        "rows_ok": 6161,
+        "rows_invalid": 0,
+        "reason_counts": {}
+      },
+      {
+        "path": "notxbf_com_excels_f4/bc98-2983-907b/train/bc98-2983-907b_0.xlsx",
+        "device": "bc98-2983-907b",
+        "split": "train",
+        "size_bytes": 122021993,
+        "sha256": "ac167863d32537f715741006f3533c3b1e11dd7e30f1cf02c31fa85aa0007534",
+        "rows_total": 6161,
+        "rows_ok": 6161,
+        "rows_invalid": 0,
+        "reason_counts": {}
+      },
+      {
+        "path": "notxbf_com_excels_f4/d0c1-bfe4-18f0/train/d0c1-bfe4-18f0_0.xlsx",
+        "device": "d0c1-bfe4-18f0",
+        "split": "train",
+        "size_bytes": 128440729,
+        "sha256": "23ae659b982ecb6294a5e6a0572c01d6456c8259bd775958e2239c4d4939193c",
+        "rows_total": 6496,
+        "rows_ok": 6496,
+        "rows_invalid": 0,
+        "reason_counts": {}
+      },
+      {
+        "path": "notxbf_com_excels_f4/d0c1-bfe4-18f0/valid/d0c1-bfe4-18f0_0.xlsx",
+        "device": "d0c1-bfe4-18f0",
+        "split": "valid",
+        "size_bytes": 138210577,
+        "sha256": "8e43f87931ece56a2c522222fe895d451c3bca9104326552b1be0ee7a4014baa",
+        "rows_total": 6496,
+        "rows_ok": 6496,
+        "rows_invalid": 0,
+        "reason_counts": {}
+      },
+      {
+        "path": "notxbf_com_excels_f4/341c-f0d4-70be/valid/341c-f0d4-70be_0.xlsx",
+        "device": "341c-f0d4-70be",
+        "split": "valid",
+        "size_bytes": 163615127,
+        "sha256": "85415a6778aed9ca22fd53413728ea6c4700ba4ddaeec38be9553f89111f3f6c",
+        "rows_total": 7712,
+        "rows_ok": 7712,
+        "rows_invalid": 0,
+        "reason_counts": {}
+      },
+      {
+        "path": "notxbf_com_excels_f4/341c-f0d4-70be/train/341c-f0d4-70be_0.xlsx",
+        "device": "341c-f0d4-70be",
+        "split": "train",
+        "size_bytes": 152251795,
+        "sha256": "42e06ef553f31d5516a66afcbc46da9d22671fa400618cc14335a2b1a00bb7cc",
+        "rows_total": 7712,
+        "rows_ok": 7712,
+        "rows_invalid": 0,
+        "reason_counts": {}
+      }
+    ],
+    "row_audit_csv": "data/derived/q1_row_audit.csv.gz",
+    "valid_order": "manifest file order, then original worksheet row order"
+  }
+}

@@ -1,0 +1,431 @@
+{
+  "protocol": "Nested leave-one-device-out; EESM and HGBR refitted/selected exclusively on outer training devices.",
+  "notes": "Inner estimator follows the paper appendix, including in-sample HGBR selection/blending; only outer held-out scores assess device transfer. Three devices limit precision.",
+  "overall": {
+    "iso": {
+      "n": 20369,
+      "mse": 4152.332496666371,
+      "rmse": 64.43859477569612,
+      "mae": 49.50169740819762,
+      "r2": 0.5690313601341752
+    },
+    "hgbr": {
+      "n": 20369,
+      "mse": 3700.951042857415,
+      "rmse": 60.83544232482751,
+      "mae": 48.66131473637306,
+      "r2": 0.61588002925325
+    },
+    "blend": {
+      "n": 20369,
+      "mse": 3700.951042857415,
+      "rmse": 60.83544232482751,
+      "mae": 48.66131473637306,
+      "r2": 0.61588002925325
+    }
+  },
+  "folds": [
+    {
+      "fold": 1,
+      "held_out_devices": [
+        "341c-f0d4-70be"
+      ],
+      "n_train": 12657,
+      "n_test": 7712,
+      "alpha": 2.8752867891211302,
+      "beta": 0.740418246403173,
+      "train_metrics": {
+        "protocol": "paper_appendix",
+        "n_train": 12657,
+        "n_features": 33,
+        "alpha": 2.8752867891211302,
+        "beta": 0.740418246403173,
+        "parameter_selection": {
+          "phase": "local_refinement",
+          "alpha": 2.8752867891211302,
+          "beta": 0.740418246403173,
+          "cv_mse": 4552.121497144906,
+          "cv_r2": 0.5722204157688112,
+          "evaluation": "evaluated",
+          "reuse_alpha": null,
+          "clipped_count": 301,
+          "seed_index": 0
+        },
+        "splitter": "GroupKFold",
+        "n_folds": 2,
+        "n_groups": 2,
+        "training_fit": {
+          "iso": {
+            "n": 12657,
+            "mse": 4151.453872252102,
+            "rmse": 64.43177688262293,
+            "mae": 50.90230750203668,
+            "r2": 0.6157983255647144
+          },
+          "hgbr": {
+            "n": 12657,
+            "mse": 1902.1242420217059,
+            "rmse": 43.613349355692755,
+            "mae": 34.1948946955473,
+            "r2": 0.8239654489109763
+          },
+          "blend": {
+            "n": 12657,
+            "mse": 1902.1242420217059,
+            "rmse": 43.613349355692755,
+            "mae": 34.1948946955473,
+            "r2": 0.8239654489109763
+          },
+          "blend_mse_audit": {
+            "n": 12657,
+            "mse": 1902.1242420217059,
+            "rmse": 43.613349355692755,
+            "mae": 34.1948946955473,
+            "r2": 0.8239654489109763
+          }
+        },
+        "iso_oof_at_selected_parameters": {
+          "n": 12657,
+          "mse": 4406.889246873645,
+          "rmse": 66.3844051481494,
+          "mae": 52.29424854206364,
+          "r2": 0.5921587280503231
+        },
+        "iso_oof_scope": "ISO-only OOF; parameters may have been selected on the same folds; not an independent full-pipeline score",
+        "hgbr_selection_rule": "largest training R2 among three appendix configurations",
+        "hgbr_candidates": [
+          {
+            "max_leaf_nodes": 31,
+            "learning_rate": 0.08,
+            "max_iter": 300,
+            "l2_regularization": 0.01,
+            "train_r2": 0.8118051084501232,
+            "n_iter": 50
+          },
+          {
+            "max_leaf_nodes": 63,
+            "learning_rate": 0.06,
+            "max_iter": 400,
+            "l2_regularization": 0.02,
+            "train_r2": 0.8239654489109763,
+            "n_iter": 61
+          },
+          {
+            "max_leaf_nodes": 31,
+            "learning_rate": 0.1,
+            "max_iter": 250,
+            "l2_regularization": 0.0,
+            "train_r2": 0.8140686762294145,
+            "n_iter": 46
+          }
+        ],
+        "hgbr_selected": {
+          "max_leaf_nodes": 63,
+          "learning_rate": 0.06,
+          "max_iter": 400,
+          "l2_regularization": 0.02
+        },
+        "blend_weight_hgbr_appendix_variance": 1.0,
+        "blend_weight_hgbr_mse_audit": 1.0,
+        "blend_weight_data": "ISO OOF predictions and HGBR in-sample predictions",
+        "reconstruction_additions": [
+          "fixed HGBR random_state",
+          "stable training feature schema",
+          "vectorized arithmetic",
+          "full parameter search ledger"
+        ]
+      },
+      "held_out": {
+        "iso": {
+          "n": 7712,
+          "mse": 3801.838718285694,
+          "rmse": 61.65905220067605,
+          "mae": 46.6593102696373,
+          "r2": 0.25284231774633104
+        },
+        "hgbr": {
+          "n": 7712,
+          "mse": 3424.6631317823803,
+          "rmse": 58.52062142341262,
+          "mae": 46.41368759325771,
+          "r2": 0.3269668816472312
+        },
+        "blend": {
+          "n": 7712,
+          "mse": 3424.6631317823803,
+          "rmse": 58.52062142341262,
+          "mae": 46.41368759325771,
+          "r2": 0.3269668816472312
+        }
+      }
+    },
+    {
+      "fold": 2,
+      "held_out_devices": [
+        "d0c1-bfe4-18f0"
+      ],
+      "n_train": 13873,
+      "n_test": 6496,
+      "alpha": 1.378977107380065,
+      "beta": 13.76529548750993,
+      "train_metrics": {
+        "protocol": "paper_appendix",
+        "n_train": 13873,
+        "n_features": 33,
+        "alpha": 1.378977107380065,
+        "beta": 13.76529548750993,
+        "parameter_selection": {
+          "phase": "local_refinement",
+          "alpha": 1.378977107380065,
+          "beta": 13.76529548750993,
+          "cv_mse": 4946.731502000728,
+          "cv_r2": 0.29431411727465584,
+          "evaluation": "evaluated",
+          "reuse_alpha": null,
+          "clipped_count": 0,
+          "seed_index": 4
+        },
+        "splitter": "GroupKFold",
+        "n_folds": 2,
+        "n_groups": 2,
+        "training_fit": {
+          "iso": {
+            "n": 13873,
+            "mse": 3697.824409337075,
+            "rmse": 60.8097394282945,
+            "mae": 45.23896727022554,
+            "r2": 0.5893861941168592
+          },
+          "hgbr": {
+            "n": 13873,
+            "mse": 1520.2636868741015,
+            "rmse": 38.99055894539217,
+            "mae": 29.50707033927379,
+            "r2": 0.8311868846889837
+          },
+          "blend": {
+            "n": 13873,
+            "mse": 1520.2636868741015,
+            "rmse": 38.99055894539217,
+            "mae": 29.50707033927379,
+            "r2": 0.8311868846889837
+          },
+          "blend_mse_audit": {
+            "n": 13873,
+            "mse": 1520.2636868741015,
+            "rmse": 38.99055894539217,
+            "mae": 29.50707033927379,
+            "r2": 0.8311868846889837
+          }
+        },
+        "iso_oof_at_selected_parameters": {
+          "n": 13873,
+          "mse": 4785.204583918011,
+          "rmse": 69.17517317591631,
+          "mae": 51.57956740066751,
+          "r2": 0.46864132835223604
+        },
+        "iso_oof_scope": "ISO-only OOF; parameters may have been selected on the same folds; not an independent full-pipeline score",
+        "hgbr_selection_rule": "largest training R2 among three appendix configurations",
+        "hgbr_candidates": [
+          {
+            "max_leaf_nodes": 31,
+            "learning_rate": 0.08,
+            "max_iter": 300,
+            "l2_regularization": 0.01,
+            "train_r2": 0.8197375937580679,
+            "n_iter": 69
+          },
+          {
+            "max_leaf_nodes": 63,
+            "learning_rate": 0.06,
+            "max_iter": 400,
+            "l2_regularization": 0.02,
+            "train_r2": 0.8311868846889837,
+            "n_iter": 76
+          },
+          {
+            "max_leaf_nodes": 31,
+            "learning_rate": 0.1,
+            "max_iter": 250,
+            "l2_regularization": 0.0,
+            "train_r2": 0.8185265564607087,
+            "n_iter": 51
+          }
+        ],
+        "hgbr_selected": {
+          "max_leaf_nodes": 63,
+          "learning_rate": 0.06,
+          "max_iter": 400,
+          "l2_regularization": 0.02
+        },
+        "blend_weight_hgbr_appendix_variance": 1.0,
+        "blend_weight_hgbr_mse_audit": 1.0,
+        "blend_weight_data": "ISO OOF predictions and HGBR in-sample predictions",
+        "reconstruction_additions": [
+          "fixed HGBR random_state",
+          "stable training feature schema",
+          "vectorized arithmetic",
+          "full parameter search ledger"
+        ]
+      },
+      "held_out": {
+        "iso": {
+          "n": 6496,
+          "mse": 4614.017379976439,
+          "rmse": 67.92655872320074,
+          "mae": 53.2235178304965,
+          "r2": 0.538092973806991
+        },
+        "hgbr": {
+          "n": 6496,
+          "mse": 3407.342162595148,
+          "rmse": 58.372443520852784,
+          "mae": 46.43239380312982,
+          "r2": 0.6588926404186155
+        },
+        "blend": {
+          "n": 6496,
+          "mse": 3407.342162595148,
+          "rmse": 58.372443520852784,
+          "mae": 46.43239380312982,
+          "r2": 0.6588926404186155
+        }
+      }
+    },
+    {
+      "fold": 3,
+      "held_out_devices": [
+        "bc98-2983-907b"
+      ],
+      "n_train": 14208,
+      "n_test": 6161,
+      "alpha": 1.4367610975251648,
+      "beta": 0.4421880773547668,
+      "train_metrics": {
+        "protocol": "paper_appendix",
+        "n_train": 14208,
+        "n_features": 33,
+        "alpha": 1.4367610975251648,
+        "beta": 0.4421880773547668,
+        "parameter_selection": {
+          "phase": "local_refinement",
+          "alpha": 1.4367610975251648,
+          "beta": 0.4421880773547668,
+          "cv_mse": 3988.7988713438663,
+          "cv_r2": 0.42197206344705174,
+          "evaluation": "evaluated",
+          "reuse_alpha": null,
+          "clipped_count": 109,
+          "seed_index": 2
+        },
+        "splitter": "GroupKFold",
+        "n_folds": 2,
+        "n_groups": 2,
+        "training_fit": {
+          "iso": {
+            "n": 14208,
+            "mse": 3182.930459572179,
+            "rmse": 56.4174659088139,
+            "mae": 42.890480914462024,
+            "r2": 0.6220543065658051
+          },
+          "hgbr": {
+            "n": 14208,
+            "mse": 1456.0717610810675,
+            "rmse": 38.15850837075615,
+            "mae": 28.618165624930427,
+            "r2": 0.8271039664794618
+          },
+          "blend": {
+            "n": 14208,
+            "mse": 1456.0717610810675,
+            "rmse": 38.15850837075615,
+            "mae": 28.618165624930427,
+            "r2": 0.8271039664794618
+          },
+          "blend_mse_audit": {
+            "n": 14208,
+            "mse": 1456.0717610810675,
+            "rmse": 38.15850837075615,
+            "mae": 28.618165624930427,
+            "r2": 0.8271039664794618
+          }
+        },
+        "iso_oof_at_selected_parameters": {
+          "n": 14208,
+          "mse": 4526.924961046095,
+          "rmse": 67.28242683677584,
+          "mae": 50.83612268612969,
+          "r2": 0.4624664863846568
+        },
+        "iso_oof_scope": "ISO-only OOF; parameters may have been selected on the same folds; not an independent full-pipeline score",
+        "hgbr_selection_rule": "largest training R2 among three appendix configurations",
+        "hgbr_candidates": [
+          {
+            "max_leaf_nodes": 31,
+            "learning_rate": 0.08,
+            "max_iter": 300,
+            "l2_regularization": 0.01,
+            "train_r2": 0.812439728105427,
+            "n_iter": 63
+          },
+          {
+            "max_leaf_nodes": 63,
+            "learning_rate": 0.06,
+            "max_iter": 400,
+            "l2_regularization": 0.02,
+            "train_r2": 0.8271039664794618,
+            "n_iter": 79
+          },
+          {
+            "max_leaf_nodes": 31,
+            "learning_rate": 0.1,
+            "max_iter": 250,
+            "l2_regularization": 0.0,
+            "train_r2": 0.8149406187987664,
+            "n_iter": 57
+          }
+        ],
+        "hgbr_selected": {
+          "max_leaf_nodes": 63,
+          "learning_rate": 0.06,
+          "max_iter": 400,
+          "l2_regularization": 0.02
+        },
+        "blend_weight_hgbr_appendix_variance": 1.0,
+        "blend_weight_hgbr_mse_audit": 1.0,
+        "blend_weight_data": "ISO OOF predictions and HGBR in-sample predictions",
+        "reconstruction_additions": [
+          "fixed HGBR random_state",
+          "stable training feature schema",
+          "vectorized arithmetic",
+          "full parameter search ledger"
+        ]
+      },
+      "held_out": {
+        "iso": {
+          "n": 6161,
+          "mse": 4104.272606533208,
+          "rmse": 64.06459713861634,
+          "mae": 49.13544909612551,
+          "r2": 0.6480694922489829
+        },
+        "hgbr": {
+          "n": 6161,
+          "mse": 4356.366666359176,
+          "rmse": 66.00277771699594,
+          "mae": 53.82488735608632,
+          "r2": 0.6264530941729041
+        },
+        "blend": {
+          "n": 6161,
+          "mse": 4356.366666359176,
+          "rmse": 66.00277771699594,
+          "mae": 53.82488735608632,
+          "r2": 0.6264530941729041
+        }
+      }
+    }
+  ]
+}

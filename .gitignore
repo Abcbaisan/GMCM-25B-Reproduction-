@@ -1,3 +1,14 @@
 /2025年研究生数模竞赛赛题数据-final
 /无线通信系统链路速率建模--数据集.rar
 /B题-数据集.7z
+.work/
+data/raw/
+data/processed/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.venv/
+outputs/**/*.joblib
+outputs/**/*.npz
+outputs/**/*.xlsx

@@ -1,0 +1,170 @@
+{
+  "scope": "question_1_only",
+  "protocol": "paper_appendix",
+  "parameters": {
+    "alpha": 2.8,
+    "beta": 0.7673818741681168
+  },
+  "model_metrics": {
+    "protocol": "paper_appendix",
+    "n_train": 20369,
+    "n_features": 34,
+    "alpha": 2.8,
+    "beta": 0.7673818741681168,
+    "parameter_selection": {
+      "phase": "coarse_grid",
+      "alpha": 2.8,
+      "beta": 0.7673818741681168,
+      "cv_mse": 4268.077716702125,
+      "cv_r2": 0.4589054773654994,
+      "evaluation": "evaluated",
+      "reuse_alpha": null,
+      "clipped_count": 297
+    },
+    "splitter": "GroupKFold",
+    "n_folds": 3,
+    "n_groups": 3,
+    "training_fit": {
+      "iso": {
+        "n": 20369,
+        "mse": 3697.4568792026803,
+        "rmse": 60.80671738552148,
+        "mae": 45.96848427123638,
+        "r2": 0.6162426868580922
+      },
+      "hgbr": {
+        "n": 20369,
+        "mse": 1667.2921282319596,
+        "rmse": 40.832488636280296,
+        "mae": 31.25969310441525,
+        "r2": 0.8269525329823659
+      },
+      "blend": {
+        "n": 20369,
+        "mse": 1667.2921282319596,
+        "rmse": 40.832488636280296,
+        "mae": 31.25969310441525,
+        "r2": 0.8269525329823659
+      },
+      "blend_mse_audit": {
+        "n": 20369,
+        "mse": 1667.2921282319596,
+        "rmse": 40.832488636280296,
+        "mae": 31.25969310441525,
+        "r2": 0.8269525329823659
+      }
+    },
+    "iso_oof_at_selected_parameters": {
+      "n": 20369,
+      "mse": 4138.725830885214,
+      "rmse": 64.33292959974087,
+      "mae": 49.33050703706984,
+      "r2": 0.57044358958582
+    },
+    "iso_oof_scope": "ISO-only OOF; parameters may have been selected on the same folds; not an independent full-pipeline score",
+    "hgbr_selection_rule": "largest training R2 among three appendix configurations",
+    "hgbr_candidates": [
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.08,
+        "max_iter": 300,
+        "l2_regularization": 0.01,
+        "train_r2": 0.8179561314287604,
+        "n_iter": 83
+      },
+      {
+        "max_leaf_nodes": 63,
+        "learning_rate": 0.06,
+        "max_iter": 400,
+        "l2_regularization": 0.02,
+        "train_r2": 0.8269525329823659,
+        "n_iter": 81
+      },
+      {
+        "max_leaf_nodes": 31,
+        "learning_rate": 0.1,
+        "max_iter": 250,
+        "l2_regularization": 0.0,
+        "train_r2": 0.8231356015410667,
+        "n_iter": 92
+      }
+    ],
+    "hgbr_selected": {
+      "max_leaf_nodes": 63,
+      "learning_rate": 0.06,
+      "max_iter": 400,
+      "l2_regularization": 0.02
+    },
+    "blend_weight_hgbr_appendix_variance": 1.0,
+    "blend_weight_hgbr_mse_audit": 1.0,
+    "blend_weight_data": "ISO OOF predictions and HGBR in-sample predictions",
+    "reconstruction_additions": [
+      "fixed HGBR random_state",
+      "stable training feature schema",
+      "vectorized arithmetic",
+      "full parameter search ledger"
+    ]
+  },
+  "training_scores": {
+    "iso": {
+      "n": 20369,
+      "mse": 3697.4568792026803,
+      "rmse": 60.80671738552148,
+      "mae": 45.96848427123638,
+      "r2": 0.6162426868580922
+    },
+    "hgbr": {
+      "n": 20369,
+      "mse": 1667.2921282319596,
+      "rmse": 40.832488636280296,
+      "mae": 31.25969310441525,
+      "r2": 0.8269525329823659
+    },
+    "blend": {
+      "n": 20369,
+      "mse": 1667.2921282319596,
+      "rmse": 40.832488636280296,
+      "mae": 31.25969310441525,
+      "r2": 0.8269525329823659
+    }
+  },
+  "nested_device_holdout": {
+    "iso": {
+      "n": 20369,
+      "mse": 4152.332496666371,
+      "rmse": 64.43859477569612,
+      "mae": 49.50169740819762,
+      "r2": 0.5690313601341752
+    },
+    "hgbr": {
+      "n": 20369,
+      "mse": 3700.951042857415,
+      "rmse": 60.83544232482751,
+      "mae": 48.66131473637306,
+      "r2": 0.61588002925325
+    },
+    "blend": {
+      "n": 20369,
+      "mse": 3700.951042857415,
+      "rmse": 60.83544232482751,
+      "mae": 48.66131473637306,
+      "r2": 0.61588002925325
+    }
+  },
+  "n_valid": 20369,
+  "n_valid_predictions": 20369,
+  "random_seed": 42,
+  "elapsed_seconds": 215.94425850000016,
+  "python": "3.12.4 | packaged by Anaconda, Inc. | (main, Jun 18 2024, 15:03:56) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.19045-SP0",
+  "packages": {
+    "numpy": "2.2.6",
+    "scipy": "1.14.1",
+    "pandas": "3.0.2",
+    "openpyxl": "3.1.5",
+    "scikit-learn": "1.8.0",
+    "matplotlib": "3.9.2",
+    "joblib": "1.5.3",
+    "threadpoolctl": "3.6.0"
+  }
+}
